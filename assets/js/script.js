@@ -1,20 +1,15 @@
 
-//print to screen
-//question-answer bank === DONE
-//timer    === DONE
-//if question is not correct subtract time === DONE
-//if time = 0 || questions = 0 then game over === DONE
-//when game over then save score
-
 //HTML Element References
 var timeRemainingEl = document.querySelector("#timeRemaining")
+timeRemainingEl.textContent= countdown;
 var startBtn = document.querySelector("#startBtn")
 //var questionTitle = document.querySelector("#questionTitle")
 
+//Global variables
+var currentQ = 0; // keeps track of the question in the question bank
+var countdown = 60; // for the timer
 var highScore = [];// array of people that scored the most
-
-// Question Bank
-
+//Question bank
 var QnA = [
     {
         question: "What do you use to comment JS code?",
@@ -41,13 +36,10 @@ var QnA = [
         answer: "Louisiana"
     }
 ]
+// Code Quiz functions
 
-var currentQ = 0; // keeps track of the question in the question bank
-var countdown = 60; // for the timer
-timeRemainingEl.textContent= countdown;
-
-// startQuiz() starts the timer and iterates through the questions.
-
+//timerStart takes away the welcome message and the start button
+//so that it the questions can be displayed.
 function timerStart() {
     var button = document.getElementById("startBtn");
     var message = document.querySelector("p#startPrompt");
