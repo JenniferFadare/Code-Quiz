@@ -23,10 +23,10 @@ WHEN I answer a question incorrectly
     - I subtract 5 seconds for a wrong answer
 
 WHEN all questions are answered or the timer reaches 0
-THEN the game is over
+[X] THEN the game is over
 
 WHEN the game is over
-THEN I can save my initials and score
+[X] THEN I can save my initials and score
 
 # Grading Requirements Checklist
 
